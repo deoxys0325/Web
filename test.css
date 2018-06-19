@@ -514,7 +514,11 @@ hr{
 	line-height:90px;
 	cursor: default;
 }
-
+.goTop:hover{
+	transition: 0.2s;
+	background-color: rgba(200,200,250,0.1);
+	color: rgb(255,255,255);
+}
 .selectionBlockListR{
 	width:100px;
 	height:90px;
