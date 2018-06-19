@@ -17,29 +17,7 @@
     opacity: 1;
     transition: all 0.2s ease-in-out 0.1s;
 }
-.view-ninth .mask-1 {
-    left: auto;
-    right: 0;
-    transform: rotate(56.5deg) translateX(-180px);
-    transform-origin: 100% 0%;
-}
-.view-ninth .mask-2 {
-    top: auto;
-    bottom: 0;
-    transform: rotate(56.5deg) translateX(180px);
-    transform-origin: 0% 100%;
-}
-.view-ninth .content {
-    background: rgba(0, 0, 0, 0.7);
-    height: 0;
-    filter: alpha(opacity=50);
-    opacity: 0.5;
-    width: 361px;
-    overflow: hidden;
-    transform: rotate(-33.5deg) translate(-112px, 166px);
-    transform-origin: 0% 100%;
-    transition: all 0.2s ease-in-out 0.1s;
-}
+
 .view-ninth h2 {
     background: transparent;
     margin-top: 5px;
