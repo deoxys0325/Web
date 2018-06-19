@@ -1,0 +1,12 @@
+.black{
+    width: 1920px;
+    height: 1080px;
+    left: 0px;
+    top: 0px;
+    position: fixed;
+    background: rgb(0,0,0);
+    z-index: -10;
+    opacity: 0;
+}
+
+canvas { position: absolute; top: 0; left: 0; z-index: -2; opacity: 0.5;}

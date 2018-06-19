@@ -1,0 +1,59 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="test.css" />
+	
+    <link rel="stylesheet" type="text/css" href="MenuList_common.css" />
+    <link rel="stylesheet" type="text/css" href="MenuList.css" />
+	<script type="text/javascript" src="reload.js"></script>
+	<script type="text/javascript" src="test.js"></script>
+</head>
+
+<body>
+	<script type="text/javascript" src="test.js"></script>
+	<!--上方選單列-->
+	<div class = "topbarColorBlock"></div>
+	<div class = "topbar">
+		Welcom to LightNovel & Comic  Database
+		<div class = "topbar_selection">
+		<ul>
+			<a>
+			<a href="testPage_home.html">
+			<li class = "topbarLink">
+				&nbsp;首頁
+			</li>
+			</a>
+			<a>
+			<a href="testPage_guide.html">
+			<li class = "topbarLink">
+				&nbsp;導覽
+			</li>
+			</a>
+			<a href="testPage_commu.html">
+			<li class = "topbarLink">
+				&nbsp;聯絡
+			</li>
+			</a>
+			<a href="testPage_comic.html">
+			<li class = "topbarLink">
+				&nbsp;<返回
+			</li>
+			</a>
+			
+		</ul>
+		</div>
+	</div>
+
+	<!--資料-->
+	<div class = "deleteSearchBlock">
+		<div class = "deleteSearchTitle">書名</div>
+		<input id = "deleteBookName" class = "deleteSearchInput" type="text" name="欄位名稱" value = "請點選想刪除的書">
+		<div class = "deleteSearchSubmit" onclick = "deleteBook()">ok</div>
+	</div>
+	
+	<!--主區塊-->
+	<div id = "listBlock" class = "deleteSelectBlock"></div>
+
+</body>
+
+</html>

@@ -1,0 +1,116 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="test.css" />
+	
+    <link rel="stylesheet" type="text/css" href="MenuList_common.css" />
+    <link rel="stylesheet" type="text/css" href="MenuList.css" />
+	<script type="text/javascript" src="test.js"></script>
+	<script type="text/javascript" src="cool.js"></script>
+	<script type="text/javascript" src="reload.js"></script>
+	
+	<script src="jquery-3.3.1.min.js"></script>
+	
+</head>
+
+<body>
+	
+	<!--上方選單列-->
+	<div class = "topbarColorBlock"></div>
+	<div class = "topbar">
+		Welcom to LightNovel Database
+		<div class = "topbar_selection">
+		<ul>
+			<a href="testPage_home.html">
+			<li class = "topbarLink">
+				&nbsp;首頁
+			</li>
+			</a>
+			<a href="testPage_guide.html">
+			<li class = "topbarLink">
+				&nbsp;導覽
+			</li>
+			</a>
+			<a href="testPage_commu.html">
+			<li class = "topbarLink">
+				&nbsp;聯絡
+			</li>
+			</a>
+
+			<div style = "float: left;">
+			<img src = "https://i2.bahamut.com.tw/menu.gif" id = "menu" onclick = "switchMenu(this, 'Set'), settingListAnimateCTL('Set', 'settingElement')">
+				<div id = "Set" class = "settingList" style = "display: none">
+					<div class = "settingElement" style = "animation-delay: 0.1s;" onclick="researchBookByBookname();">依書名搜尋</div>
+					<div class = "settingElement" style = "animation-delay: 0.2s;" onclick="researchBookByBookauthor();">依作者搜尋</div>
+					<div class = "settingElement" style = "animation-delay: 0.3s;" onclick="researchBookByBookprice();">依價格搜尋</div>
+					<div class = "settingElement" style = "animation-delay: 0.4s;" onclick="researchBookByBookdate();">依出版日搜尋</div>
+					<div class = "settingElement" style = "animation-delay: 0.5s;">
+						<a href="testPage_add.html" class = "settingElementText">
+						新增資料
+						</a>
+					</div>
+					<div class = "settingElement" style = "animation-delay: 0.7s;">
+					<a href="testPage_delete.html" class = "settingElementText">
+						刪除資料
+					</a>
+					<input type="text" id="research" style="width:100px;margin-top: 12px;height:25px;float:left;margin-left: 20px;background-color:rgba(70,70, 70,0.8);border: 1px solid rgba(89, 50, 33, 1);color: rgb(255, 194, 81);	border-radius: 10px;">
+					</div>
+				</div>
+			</div>
+		</ul>
+		</div>
+	</div>
+<!--左側選項列-->
+	<div id = "block" class = "selectionBlock">
+		
+		<div class = "selectionBlockList" >
+		<div class = "selectionBlockListL">down</div>依書名排序<div class = "selectionBlockListR">up</div>
+		</div>
+		<div class = "selectionBlockList" >
+		<div class = "selectionBlockListL">down</div>依作者排序<div class = "selectionBlockListR">up</div>
+		</div>
+		<div class = "selectionBlockList" >
+		<div class = "selectionBlockListL">down</div>依價格排序<div class = "selectionBlockListR">up</div>
+		</div>
+		<div class = "selectionBlockList" >
+		<div class = "selectionBlockListL">down</div>依出版日排序<div class = "selectionBlockListR">up</div>
+		</div>
+	</div>
+	<!--依書名排序-->
+	<!--依作者排序-->
+	<!--依價格排序-->
+	<!--依出版日排序-->
+
+	<!--分類-->
+	<div class = "menuListBlock">
+		<div class = "menuList">
+			<a href = "testPage_comic.html">
+			<div class = "view view-ninth">
+                <img src="images/menuList2.jpg">
+                <div class="mask mask-1"></div>
+                <div class="mask mask-2"></div>
+                <div class="content">
+                    <h2>輕小說 LightNovel</h2>
+                    <p>Let's relax for couple hours, with these fantasy and brisk letters.</p>
+                    <a href="#" class="info">Read More</a>
+                </div>
+   			 </div>
+   			 </a>
+
+    		</div>
+    		</a>
+    	</div>
+	</div>
+	
+	<!--資料顯示區-->
+	<div id = "ListDetailBlock"></div>
+		
+	<!--主區塊-->
+	<div id = "listBlock" class = "listBlock"></div>
+		
+
+
+
+</body>
+
+</html>

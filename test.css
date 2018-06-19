@@ -1,0 +1,799 @@
+/*滑條*/
+::-webkit-scrollbar{
+    width: 12px !important;
+    height: 12px !important;
+    background-color: #F5F5F5;
+}
+::-webkit-scrollbar-track{
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3) inset;
+    background-color: #FFFFF7 !important;
+}
+::-webkit-scrollbar-thumb{
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 3px rgba(0,0,0,0.3) inset;
+    background-color: #999;
+}
+::-webkit-scrollbar-thumb:hover{
+    background-color: #777;
+}
+::-webkit-scrollbar-thumb:active{
+    background-color: #555;
+}
+
+*{
+	font-family: "微軟正黑體";
+}
+
+body{
+	background: linear-gradient(90deg, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.6) 100%),url(images/BG.jpg);
+	background-position: top center;
+	background-size: cover;
+	background-attachment: fixed;
+}
+
+a{
+	text-decoration:none;
+	color: inherit;
+}
+
+hr{
+	margin-top: 0px;
+	margin-bottom: 0px;
+}
+
+.topbar{
+	position: fixed;
+	display: block;
+	left: 0;
+	top: 0;
+	right: 0;
+	height: 60px;
+	background-color: rgba(0,0,0,0.5);
+	z-index: 100;
+	letter-spacing: 10px;
+	color: rgb(200,200,250);
+	font-size: 18px;
+	text-align:left;
+	cursor: default;
+	animation: topbarAnimation 7s infinite alternate;
+	border-bottom: 2px solid rgba(0,0,0,1);
+
+}
+
+@keyframes topbarAnimation{
+	0%{
+		color: rgb(200,200,250);
+	}
+	100%{
+		color: rgb(210,200,200);
+	}
+}
+
+
+.topbarColorBlock{
+	top: 0;
+	height: 60px;
+	width: 170px;
+	z-index:0;
+	background-color: rgba(150,170,250,0.7);
+	position: fixed;
+	animation: topbarColorBlockAnimation 7s infinite alternate;
+	z-index:1;
+}
+
+/*Version 1*/
+
+@keyframes topbarColorBlockAnimation{
+	0%{
+		left:0%;
+	}
+	100%{
+		left:88%;
+	}
+}
+
+
+/*Version 2*/
+/*
+@keyframes topbarColorBlockAnimation{
+	0%{
+		left:0%;
+		width: 0%;
+	}
+	50%{
+		left:0%;
+		width: 100%;
+	}
+	100%{
+		left:100%;
+		width: 0%;
+	}
+}
+*/
+
+.listBlock{
+	position: absolute;
+	left: 500px;
+	width: 700px;
+	margin-top: 20px;
+	background-color:rgba(0,0,0,0.5);
+	border: 1px solid rgba(0,0,0,1);
+}
+.list{
+	margin: 10px;
+	padding: 15px 30px 15px 15px;
+	border: 2px solid transparent;
+	border-radius: 10px;
+	line-height: 1.5;
+	background-color: rgba(23, 36, 61, 0.9);
+	border-color: rgb(210,200,230);
+	color: rgb(190,190,255);
+	cursor: pointer;
+	width: 630px;
+}
+.list:hover{
+	transition: 0.3s;
+	background-color: rgba(123, 136, 161, 0.5)!important;
+	color: rgb(150,150,200) !important;
+}
+
+.list_detail{
+	border-radius: 10px;
+	margin: 10px;
+	background-color: rgba(23, 36, 61, 0.6);
+	color:rgb(250,250,250);
+	border: 1px solid rgba(0,0,0,1);
+	cursor: default;
+	width: 630px;
+	animation: listDetailAnimation 1s;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+
+}
+
+.list_detail2{
+	position: fixed;
+	top:55px;
+	right:20px;
+	border-radius: 10px;
+	background-color: rgba(23, 36, 61, 0.8);
+	color:rgb(250,250,250);
+	border: 2px solid rgba(0,0,0,1);
+	cursor: default;
+	width: 630px;
+	animation: listDetailAnimation 1s;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+	animation-timing-function: ease-out;
+	float:right;
+	z-index: 10;
+}
+
+/*
+.list_detail2{
+	position: fixed;
+	top:70px;
+	right:220px;
+	border-radius: 10px;
+	background-color: rgba(23, 36, 61, 0.8);
+	color:rgb(250,250,250);
+	border: 2px solid rgba(0,0,0,1);
+	cursor: default;
+	width: 430px;
+	animation: listDetailAnimation 1s;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+	float:right;
+	z-index: 10;
+}
+*/
+
+.listBlock3{
+	background: url(images/guideBG.png);
+	background-repeat: no-repeat;
+	position: absolute;
+	left: 250px;
+	width: 1163px;
+	margin-top: 100px;
+	opacity: 0.8;
+	border: 1px solid rgba(0,0,0,1);
+	border-radius: 10px;
+}
+.list3{
+	margin: 10px;
+	padding: 15px 30px 15px 15px;
+	border: 2px solid transparent;
+	border-radius: 10px;
+	line-height: 1.5;
+	background-color: rgba(23, 36, 61, 0.9);
+	border-color: rgb(210,200,230);
+	color: rgb(250,250,250);
+	cursor: pointer;
+	width: 1080px;
+	opacity: 1;
+}
+.list3:hover{
+	transition: 0.3s;
+	background-color: rgba(123, 136, 161, 0.3)!important;
+	color: rgb(150,150,200) !important;
+}
+
+.list_detail3{
+	border-radius: 10px;
+	margin: 10px;
+	background-color: rgba(23, 36, 61, 0.6);
+	color:rgb(250,250,250);
+	border: 1px solid rgba(0,0,0,1);
+	cursor: default;
+	width: 1080px;
+	animation: listDetailAnimation 1s;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+
+}
+@keyframes listDetailAnimation{
+	0%{
+		opacity: 0;
+		transform-origin:top;
+		transform:translateX(50px);
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.topbar_selection{
+	float:right;
+	cursor: pointer;
+}
+
+.topbar_selection a{
+	float:left;
+	margin-right: 10px;
+}
+
+.topbar_selection img{
+	border: 10px solid rgba(0,0,0,0);
+	height: 22px;
+	width: 30px;
+	float:left;
+}
+
+.topbar_selection ul{
+	float:top;
+}
+
+.topbar_selection ul li{
+	height: 22px;
+	float:left;
+	list-style: none;
+	border: 10px solid rgba(0,0,0,0);
+	border-left: 2px solid rgba(250,250,250,1);
+	margin-right: 5px;
+	border-radius: 100px;
+}
+
+.topbar_selection ul li:hover{
+	background-color: rgba(200,200,200,0.5);
+	transition: 0.5s;
+	animation: hoverAnimate 0.5s;
+	animation-fill-mode: forwards;
+}
+
+@keyframes hoverAnimate{
+	from{
+		border-radius: 100px;
+	}
+	to{
+		border-radius: 0px;
+	}
+
+}
+
+.topbar_selection img:hover{
+	background-color: rgba(200,200,200,0.5);
+	transition: 0.3s;
+}
+
+.menuList{
+	height:280px;
+}
+
+.settingList{
+	background-color: rgba(0,0,0,0.7);
+	height:600px;
+	width:200px;
+	position: fixed;
+	right:0px;
+	top:60px;
+	border:2px solid rgba(0,0,0,1);
+	animation: settingListAnimation 0.7s;
+	animation-play-state: paused;
+}
+
+@keyframes settingListAnimation{
+	0%{ height:200px; }
+	10%{ height: 400px; }
+	20%{ height: 600px; }
+	40%{  height: 300px; }
+	70%{  height: 600px; }
+	80%{  height: 450px; }
+	100%{ height: 600px; }
+}
+
+.settingList:hover{
+	/*background-color: rgba(250,250,250,0.5);*/
+}
+
+.settingElement{
+	border-radius: 10px;
+	height: 0px;
+	width: 0px;
+	border: 2px solid rgba(0,0,0,1);
+	background-color: rgba(200,200,200,0.5);
+	display: block;
+	opacity: 0;
+	animation: settingElementAnimation 0.3s;
+	animation-play-state: paused;
+	animation-fill-mode: forwards;
+	text-align:center;
+	line-height:50px;
+}
+
+@keyframes settingElementAnimation{
+	from{
+		opacity: 0.3;
+		height: 50px;
+		width: 200px;
+		transform-origin:bottom;
+		transform:translateX(-100px);
+	}
+	to{
+		opacity: 1;
+		height: 50px;
+		width: 200px;
+	}
+}
+
+.settingElement:hover{
+	top:1px;
+	transition: 0.3s;
+	background-color: rgba(100,100,100,0.5);
+}
+
+.settingElementText{
+	width: 200px;
+	text-align:center;
+	line-height:50px;
+}
+
+.homeSelectList{
+	border-radius: 100px;
+	width: 700px;
+	line-height: 650px;
+	height: 500px;
+	float: left;
+	border: 2px solid rgba(10,10,30,1);
+	margin-left: 150px;
+    margin-top: 170px;
+    text-align:center;
+    overflow: hidden;
+}
+
+.homeSelectList:hover{
+	transition: 0.5s;
+	border: 2px solid rgba(255,255,255,1);
+	box-shadow: 0px 0px 10px 3px rgba(200,200,200,0.5);
+}
+
+#L{
+	width: 700px;
+	height: 500px;
+	background: url(images/L.jpg);
+	color: rgb(220,220,220);
+}
+
+#R{
+	width: 700px;
+	height: 500px;
+	background: url(images/R.jpg);
+}
+
+#L:hover, #R:hover{
+	transition: 0.5s;
+	opacity: 0.8;
+}
+
+#L:hover{
+	transform: scale(1.2) translateX(60px);
+}
+
+#R:hover{
+	transform: scale(1.2) translateX(-60px);
+}
+
+
+
+.bookPicture{
+	height:200px;
+}
+/*
+#book0{
+	background: url(images/book0.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+}
+
+#book1{
+	background: url(images/book1.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+}
+
+#book2{
+	background: url(images/book2.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+}
+
+#book3{
+	background: url(images/book3.jpg);
+	background-repeat:no-repeat;
+	background-size: contain;
+}
+*/
+.book{
+	margin-top: -200px;
+	font-size:20px;
+	margin-left: 145px;
+	width:500px;
+	height:200px;
+	background-color: rgba(0,0,0,0.5);
+}
+.bookName{
+	color: rgb(220,220,220);
+	font-size:25px;
+	letter-spacing: 2px;
+	font-weight: 600;
+	margin-left: 20px;
+	line-height: 50px;
+}
+.bookWriter{
+	color: rgb(220,220,220);
+	float: right;
+	margin-top: 20px;
+	margin-right: 20px;
+}
+
+.line{
+	font-size: 13px;
+    border-bottom: solid 1px #E0E0E0;
+    font-weight: bolder;
+    height: 25px;
+    padding-top: 3px;
+    padding-bottom: 3px;
+
+}
+
+.bookDetailTittle{
+	font-weight: 600;
+	letter-spacing: 3px;
+	font-size: 20px;
+}
+
+.bookDetailInfo{
+	font-size: 18px;
+	line-height: 24px;
+	letter-spacing: 1px;
+}
+
+.topbarLink{
+	padding-left:5px;
+
+}
+
+.selectionBlock{
+	width: 300px;
+	height: 498px;
+	background-color: rgba(107, 150, 224, 0.0);
+	position: absolute;
+	margin-left: 160px;
+	border: 2px solid rgba(0,0,0,0);
+	top:330px;
+}
+
+.selectionBlockList{
+	border-radius: 10px;
+	width: 298px;
+	height: 90px;
+	border: 1px solid rgba(0,0,0,1);
+	margin-top: 6px;
+	background-color: rgba(250,250,250,0.5);
+	float: top;
+	text-align:center;
+	line-height:90px;
+	cursor: default;
+}
+
+.selectionBlockListR{
+	width:100px;
+	height:90px;
+	background-color:rgba(0,0,0,0.1);
+	float:right;
+	cursor: pointer;
+}
+.selectionBlockListR:hover{
+	background-color: rgba(100,200,200,0.5);
+	transition: 0.8s;
+	border-radius: 100px;
+}
+
+
+.selectionBlockListL{
+	width:100px;
+	height:90px;
+	background-color:rgba(0,0,0,0.1);
+	float:left;
+	z-index: 10;
+	cursor: pointer;
+}
+
+
+.selectionBlockListL:hover{
+	background-color: rgba(200,200,100,0.5);
+	transition: 0.8s;
+	border-radius: 100px; 
+}
+
+.selectionBlockList:hover{
+	transition: 0.2s;
+	background-color: rgba(200,200,250,0.1);
+	color: rgb(255,255,255);
+}
+
+.selectionBlockList1{
+	border-radius: 10px;
+	width: 298px;
+	height: 45px;
+	border: 1px solid rgba(0,0,0,1);
+	margin-top: 6px;
+	background-color: rgba(150, 105, 97,0.5);
+	float: top;
+	text-align:center;
+	line-height:45px;
+	cursor: default;
+	color: rgb(255,255,255);
+}
+
+.selectionBlockList1R{
+	width:98px;
+	height:45px;
+	background-color:rgba(0,0,0,0.3);
+	float:right;
+	cursor: pointer;
+}
+.selectionBlockList1R:hover{
+	background-color: rgba(100,200,200,0.5);
+	transition: 0.8s;
+	border-radius: 100px;
+}
+
+.selectionBlockList1L{
+	width:100px;
+	height:45px;
+	background-color:rgba(0,0,0,0.3);
+	float:left;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.selectionBlockList1L:hover{
+	background-color: rgba(200,200,100,0.5);
+	transition: 0.8s;
+	border-radius: 100px;
+}
+
+.selectionBlockList1M{
+	width:100px;
+	height:45px;
+	background-color:rgba(0,0,0,0.1);
+	float:left;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.selectionBlockList1M:hover{
+	background-color: rgba(100,200,100,0.5);
+	transition: 0.8s;
+	border-radius: 100px;
+}
+
+.selectionBlockList1:hover{
+	transition: 0.2s;
+	background-color: rgba(150, 105, 97, 0.3);
+}
+
+.addBlock{
+	margin-top: 80px;
+	margin-left: 550px;
+	width: 750px;
+	height: 750px;
+	background: rgba(225,225,225,0.6);
+	border: 2px solid rgba(0,0,0,1);
+	float: top;
+	border-radius: 10px;
+}
+
+.addInfo{
+	margin-top: 10px;
+	margin-left: 20px;
+	padding-left: 25px;
+	width:680px;
+	height:50px;
+	background: rgba(143,198,255,0.5);
+	border: 2px solid rgba(0,0,0,1);
+	text-align:left;
+}
+
+.addInfo:hover{
+	transition: 0.5s;
+	background-color: rgba(143,198,255,0.9);
+}
+
+.addInfoTitle{
+	text-align:center;
+	width:100px;
+	height:25px;
+	margin-top: 12px;
+	margin-right:10px;
+	background: rgba(255,255,255,0.2);
+	border: 1px solid rgba(0,0,0,1);
+	line-height: 25px;
+	float:left;
+	border-radius: 5px;
+
+}
+
+.addInfoInput{
+	width:500px;
+	margin-top: 12px;
+	height:25px;
+	float:left;
+	margin-left: 20px;
+	background-color:rgba(70,70, 70,0.8);
+	border: 1px solid rgba(89, 50, 33, 1);
+	color: rgb(255, 194, 81);
+	border-radius: 10px;
+}
+
+.addInfoInput:hover{
+	transition: 0.5s;
+	background-color: rgba(30,30,30,0.9);
+
+}
+
+/*
+.addButtom{
+	margin-top: 100px;
+	margin-left: 50px;
+	width: 150px;
+	height: 50px;
+	background: rgba(225,225,225,0.6);
+	border: 2px solid rgba(0,0,0,1);
+	float: left;
+	text-align:center;
+	line-height: 50px;
+	border-radius: 10px;
+	cursor:pointer;
+}
+*/
+
+.addButtom{
+	margin-left:550px;
+	margin-top: 10px;
+	width: 150px;
+	height: 50px;
+	background: rgba(225,225,225,0.6);
+	border: 2px solid rgba(0,0,0,1);
+	text-align:center;
+	line-height: 50px;
+	border-radius: 10px;
+	cursor:pointer;
+	float:left;
+}
+
+.addButtom:hover{
+	transition: 0.5s;
+	background: rgba(120,120,120,0.8);
+}
+
+.deleteSearchBlock{
+	width:950px;
+	height:60px;
+	margin-left: 400px;
+	margin-top: 80px;
+	margin-bottom: 10px;
+	background: rgba(225,225,225,0.6);
+	border: 3px solid rgba(0,0,0,1);
+}
+
+.deleteSelectBlock{
+	width:950px;
+	height:700px;
+	margin-left: 400px;
+	margin-top: 10px;
+	background: rgba(225,225,225,0.6);
+	border: 3px solid rgba(0,0,0,1);
+	overflow-y: scroll;
+}
+
+.deleteSearchTitle{
+	margin-left: 20px; 
+	margin-top: 15px;
+	width:100px;
+	height:30px;
+	text-align:center;
+	line-height: 30px;
+	background: rgba(225,225,225,0.6);
+	border: 1px solid rgba(0,0,0,1);
+	border-radius: 10px;
+	float:left;
+	cursor: default;
+}
+
+.deleteSearchInput{
+	width:730px;
+	margin-top: 15px;
+	height:32px;
+	float:left;
+	margin-left: 20px;
+	background-color:rgba(70,70, 70,0.8);
+	border: 1px solid rgba(89, 50, 33, 1);
+	color: rgb(255, 194, 81);
+	border-radius: 10px;
+	font-size: 15px;
+}
+
+.deleteSearchInput:hover{
+	transition: 0.5s;
+	background-color: rgba(30,30,30,0.9);
+}
+
+.deleteSearchSubmit{
+	margin-left: 20px; 
+	margin-top: 15px;
+	width:30px;
+	height:30px;
+	text-align:center;
+	line-height: 30px;
+	background: rgba(225,225,225,0.6);
+	border: 1px solid rgba(0,0,0,1);
+	border-radius: 30px;
+	float:left;
+	cursor:pointer;
+}
+
+.deleteSearchSubmit:hover{
+	background: rgba(225,225,225,0.9);
+	transition: 0.5s;
+}
+
+.deleteSearchList{
+	margin: 10px;
+	margin-left: 50px;
+	padding: 15px 30px 15px 15px;
+	border: 2px solid transparent;
+	border-radius: 10px;
+	line-height: 1.5;
+	background-color: rgba(23, 36, 61, 0.9);
+	border-color: rgb(210,200,230);
+	color: rgb(190,190,255);
+	cursor: pointer;
+	width: 800px;
+}
+
+.deleteSearchList:hover{
+	transition: 0.5s;
+	margin-left: 80px;
+	background-color: rgba(3,16,41,0.9);
+}

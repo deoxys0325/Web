@@ -1,0 +1,255 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="test.css" />
+	
+    <link rel="stylesheet" type="text/css" href="MenuList_common.css" />
+    <link rel="stylesheet" type="text/css" href="MenuList.css" />
+	<script type="text/javascript" src="test.js"></script>
+	<script type="text/javascript" src="cool.js"></script>
+	<script type="text/javascript" src="reload.js"></script>
+	
+	<script src="jquery-3.3.1.min.js"></script>
+	
+</head>
+
+<body>
+	
+	
+	<!--上方選單列-->
+	<div class = "topbarColorBlock"></div>
+	<div class = "topbar">
+		Welcom to LightNovel Database
+		<div class = "topbar_selection">
+		<ul>
+			<a href="testPage_home.html">
+			<li class = "topbarLink">
+				&nbsp;首頁
+			</li>
+			</a>
+			<a href="testPage_guide.html">
+			<li class = "topbarLink">
+				&nbsp;導覽
+			</li>
+			</a>
+			<a href="testPage_commu.html">
+			<li class = "topbarLink">
+				&nbsp;聯絡
+			</li>
+			</a>
+
+			<div style = "float: left;">
+			<img src = "https://i2.bahamut.com.tw/menu.gif" id = "menu" onclick = "switchMenu(this, 'Set'), settingListAnimateCTL('Set', 'settingElement')">
+				<div id = "Set" class = "settingList" style = "display: none">
+					<div class = "settingElement" style = "animation-delay: 0.1s;">依書名搜尋</div>
+					<div class = "settingElement" style = "animation-delay: 0.2s;">依作者搜尋</div>
+					<div class = "settingElement" style = "animation-delay: 0.3s;">依價格搜尋</div>
+					<div class = "settingElement" style = "animation-delay: 0.4s;">依出版日搜尋</div>
+					<div class = "settingElement" style = "animation-delay: 0.5s;">
+						<a href="testPage_add.html" class = "settingElementText">
+						新增資料
+						</a>
+					</div>
+					<div class = "settingElement" style = "animation-delay: 0.7s;">
+					<a href="testPage_delete.html" class = "settingElementText">
+						刪除資料
+					</a>
+					</div>
+				</div>
+			</div>
+		</ul>
+		</div>
+	</div>
+<!--左側選項列-->
+	<div id = "block" class = "selectionBlock">
+		
+		<div class = "selectionBlockList" >
+		<div class = "selectionBlockListL">down</div>依書名排序<div class = "selectionBlockListR">up</div>
+		</div>
+		<div class = "selectionBlockList" >
+		<div class = "selectionBlockListL">down</div>依作者排序<div class = "selectionBlockListR">up</div>
+		</div>
+		<div class = "selectionBlockList" >
+		<div class = "selectionBlockListL">down</div>依價格排序<div class = "selectionBlockListR">up</div>
+		</div>
+		<div class = "selectionBlockList" >
+		<div class = "selectionBlockListL">down</div>依出版日排序<div class = "selectionBlockListR">up</div>
+		</div>
+	</div>
+	<!--依書名排序-->
+	<!--依作者排序-->
+	<!--依價格排序-->
+	<!--依出版日排序-->
+
+	<!--分類-->
+	<div class = "menuListBlock">
+		<div class = "menuList">
+			<a href = "testPage_comic.html">
+			<div class = "view view-ninth">
+                <img src="images/menuList2.jpg">
+                <div class="mask mask-1"></div>
+                <div class="mask mask-2"></div>
+                <div class="content">
+                    <h2>輕小說 LightNovel</h2>
+                    <p>Let's relax for couple hours, with these fantasy and brisk letters.</p>
+                    <a href="#" class="info">Read More</a>
+                </div>
+   			 </div>
+   			 </a>
+
+    		</div>
+    		</a>
+    	</div>
+	</div>
+	
+	<!--資料顯示區-->
+	<div id = "ListDetailBlock">
+		<ul id = "ListDetail" class = "list_detail2" style = "display: none;">
+		<a class = "bookDetailTittle">-書名-</br></a>
+		<p class = "bookDetailInfo" style = "color:rgb(250,170,170); ">果然我的青春戀愛喜劇搞錯了(3)</p>
+		<hr>
+		<a class = "bookDetailTittle">-作者-</br></a>
+		<p class = "bookDetailInfo" style = "color:rgb(250,170,170); ">渡 航</p>
+		<hr>
+		<a class = "bookDetailTittle">-ISBN-</br></a>
+		<p class = "bookDetailInfo">9789571051840</p>
+		<hr>
+		<a class = "bookDetailTittle">-發行商-</br></a>
+		<p class = "bookDetailInfo">尖端出版社</p>
+		<hr>
+		<a class = "bookDetailTittle">-發行日期-</br></a>
+		<p class = "bookDetailInfo">2013/3/22</p>
+		<hr>
+		<a class = "bookDetailTittle">-定價-</br></a>
+		<p class = "bookDetailInfo">210元</p>
+		<hr>
+		</ul>
+
+		<ul id = "ListDetail2" class = "list_detail2" style = "display: none;">
+		<a class = "bookDetailTittle">-書名-</br></a>
+		<p style = "color:rgb(250,200,200)">不正經的魔術講師與追想日誌 (2)</p>
+		<hr>
+		<a class = "bookDetailTittle">-作者-</br></a>
+		<p style = "color:rgb(250,200,200)">羊太郎</p>
+		<hr>
+		<a class = "bookDetailTittle">-ISBN-</br></a>
+		<p>9789864865680</p>
+		<hr>
+		<a class = "bookDetailTittle">-發行商-</br></a>
+		<p>東立出版社</p>
+		<hr>
+		<a class = "bookDetailTittle">-發行日期-</br></a>
+		<p>2017/08/10</p>
+		<hr>
+		<a class = "bookDetailTittle">-定價-</br></a>
+		<p>230元</p>
+		<hr>
+		</ul>
+
+		<ul id = "ListDetail3" class = "list_detail2" style = "display: none;">
+		<a class = "bookDetailTittle">-書名-</br></a>
+		<p style = "color:rgb(250,200,200)">GAMERS電玩咖！ (4) 亞玖璃與無自覺CRITICAL</p>
+		<hr>
+		<a class = "bookDetailTittle">-作者-</br></a>
+		<p style = "color:rgb(250,200,200)">葵せきな</p>
+		<hr>
+		<a class = "bookDetailTittle">-ISBN-</br></a>
+		<p>9789864737888</p>
+		<hr>
+		<a class = "bookDetailTittle">-發行商-</br></a>
+		<p>台灣角川出版社</p>
+		<hr>
+		<a class = "bookDetailTittle">-發行日期-</br></a>
+		<p>2017/07/20</p>
+		<hr>
+		<a class = "bookDetailTittle">-定價-</br></a>
+		<p>220元</p>
+		<hr>
+		</ul>
+
+		<ul id = "ListDetail4" class = "list_detail2" style = "display: none;">
+		<a class = "bookDetailTittle">-書名-</br></a>
+		<p style = "color:rgb(250,200,200)">Sword Art Online 刀劍神域 (18) Alicization lasting</p>
+		<hr>
+		<a class = "bookDetailTittle">-作者-</br></a>
+		<p style = "color:rgb(250,200,200)">川原礫</p>
+		<hr>
+		<a class = "bookDetailTittle">-ISBN-</br></a>
+		<p>9789864736102</p>
+		<hr>
+		<a class = "bookDetailTittle">-發行商-</br></a>
+		<p>台灣角川出版社</p>
+		<hr>
+		<a class = "bookDetailTittle">-發行日期-</br></a>
+		<p>2017/04/27</p>
+		<hr>
+		<a class = "bookDetailTittle">-定價-</br></a>
+		<p>280元</p>
+		<hr>
+		</ul>
+	</div>
+		
+	<!--主區塊-->
+	<div id = "listBlock" class = "listBlock">
+		<div id = "List1" class = "list" onclick = "switchMenu(this, 'ListDetail')">
+			<div class = "bookPicture" id = "book1"></div>
+			<div class = "book">
+				<div class = "bookName">
+					果然我的青春戀愛喜劇搞錯了(3)
+				</div>
+				<hr>
+				<div class = "bookWriter">
+					作者 : 渡 航
+				</div>
+			</div>
+		</div>
+
+		<div id = "List2" class = "list" onclick = "switchMenu(this, 'ListDetail2')">
+			<div class = "bookPicture" id = "book2"></div>
+			<div class = "book">
+				<div class = "bookName">
+					不正經的魔術講師與追想日誌 (2)
+				</div>
+				<hr>
+				<div class = "bookWriter">
+					作者 : 羊太郎
+				</div>
+			</div>
+		</div>
+		
+
+		
+		
+		<div id = "List3" class = "list" onclick = "switchMenu(this, 'ListDetail3')">
+			<div class = "bookPicture" id = "book3"></div>
+				<div class = "book">
+				<div class = "bookName">
+					GAMERS電玩咖！ (4) 亞玖璃與無自覺CRITICAL
+				</div>
+				<hr>
+				<div class = "bookWriter">
+					作者 : 葵せきな
+				</div>
+				</div>
+		</div>
+
+		<div id = "List4" class = "list" onclick = "switchMenu(this, 'ListDetail4')">
+		<div class = "bookPicture" id = "book4"></div>
+			<div class = "book">
+				<div class = "bookName">
+					Sword Art Online 刀劍神域 (18) Alicization lasting
+				</div>
+				<hr>
+				<div class = "bookWriter">
+					作者 : 川原礫
+				</div>
+			</div>
+		</div>
+	</div>
+		
+
+
+
+</body>
+
+</html>

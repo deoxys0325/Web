@@ -1,0 +1,81 @@
+<html>
+
+<head>
+<link rel="stylesheet" type="text/css" href="test.css" />
+	
+    <link rel="stylesheet" type="text/css" href="MenuList_common.css" />
+    <link rel="stylesheet" type="text/css" href="MenuList.css" />
+
+</head>
+
+<body>
+	<script type="text/javascript" src="test.js"></script>
+	<!--上方選單列-->
+	<div class = "topbarColorBlock"></div>
+	<div class = "topbar">
+		Welcom to LightNovel Database
+		<div class = "topbar_selection">
+		<ul>
+			<a href="testPage_home.html">
+			<li class = "topbarLink">
+				&nbsp;首頁
+			</li>
+			</a>
+			</a>
+			<a href="testPage_guide.html">
+			<li class = "topbarLink">
+				&nbsp;導覽
+			</li>
+			</a>
+			<a href="testPage_commu.html">
+			<li class = "topbarLink">
+				&nbsp;聯絡
+			</li>
+			</a>
+			<a id = "goBack" href="testPage_comic.html">
+			<li class = "topbarLink">
+				&nbsp;<返回
+			</li>
+			</a>
+		</ul>
+		</div>
+	</div>
+
+	<!--資料-->
+	<div class = "addBlock">
+		<div class = "addInfo">
+			<div class = "addInfoTitle">書名</div>
+			<input class = "addInfoInput" type="text" id="_bookname">
+		</div>
+		<div class = "addInfo">
+			<div class = "addInfoTitle">ISBN</div>
+			<input class = "addInfoInput" type="text" id="_ISBN">
+		</div>
+		<div class = "addInfo">
+			<div class = "addInfoTitle">作者 </div>
+			<input class = "addInfoInput" type="text" id="_author">
+		</div>
+		<div class = "addInfo">
+			<div class = "addInfoTitle">繪師 </div>
+			<input class = "addInfoInput" type="text" id="_illustrator">
+		</div>
+		<div class = "addInfo">
+			<div class = "addInfoTitle">價格 </div>
+			<input class = "addInfoInput" type="text" id="_price">
+		</div>
+		<div class = "addInfo">
+			<div class = "addInfoTitle">發行商 </div>
+			<input class = "addInfoInput" type="text" id="_publisher">
+		</div>
+		<div class = "addInfo">
+			<div class = "addInfoTitle">發行日期</div>
+			<input class = "addInfoInput" type="text" id="_date">
+		</div><br>
+		
+		<input class = "addInfoInput" style="width:250px;" type = "button" id="add_book" value = "送出" onclick="addBook()" >
+		
+	</div>
+	
+</body>
+
+</html>
