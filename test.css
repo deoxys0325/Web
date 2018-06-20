@@ -381,8 +381,10 @@ hr{
 }
 
 .homePPT{
+	float: left;
 	margin-top:500px;
 	margin-left:500px;
+	text-size:50px;
 }
 
 .homeSelectList:hover{
