@@ -380,13 +380,6 @@ hr{
     overflow: hidden;
 }
 
-.homePPT{
-	float: left;
-	margin-top:500px;
-	margin-left:500px;
-	text-size:50px;
-}
-
 .homeSelectList:hover{
 	transition: 0.5s;
 	border: 2px solid rgba(255,255,255,1);
